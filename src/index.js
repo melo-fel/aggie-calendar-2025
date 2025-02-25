@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Calendar } from 'react-native-calendars';
+
+function HelloWorld() {
+  return <h1 className="greeting">Hello World!</h1>
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <HelloWorld />
   </React.StrictMode>
 );
 
