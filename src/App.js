@@ -3,30 +3,6 @@ import './App.css';
 import React, { useState } from 'react';
 import { DateTime } from 'luxon';
 
-/*
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/
 
 function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(DateTime.now().startOf('month'));
@@ -51,17 +27,18 @@ function Calendar() {
 
   return (
     <div>
+      <img src={logo} className="App_logo" alt="logo" />
       <h2>{currentMonth.toFormat('MMMM yyyy')}</h2>
       <button onClick={handlePrevMonth}>Prev</button>
       <button onClick={handleNextMonth}>Next</button>
       <div className="calendar-grid">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
+        <div style={{color: "#002D74"}}>Sun</div>
+        <div style={{color: "#002D74"}}>Mon</div>
+        <div style={{color: "#002D74"}}>Tue</div>
+        <div style={{color: "#002D74"}}>Wed</div>
+        <div style={{color: "#002D74"}}>Thu</div>
+        <div style={{color: "#002D74"}}>Fri</div>
+        <div style={{color: "#002D74"}}>Sat</div>
         {days.map((day, index) => (
           <div key={index} className="calendar-day">
             {getDayNumber(index)}
