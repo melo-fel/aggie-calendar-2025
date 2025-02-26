@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## App Description
+This application is a simple calendar that can save an event of a studnet in a day of a month
+
+### Future
+I hope to add on this project through being able to delete an event, as well as offering the ability
+to set a reminder for the student. I will also add the ability to detail the event through
+being able to set the length of time for an event.
+
 ## Available Scripts
 
 In the project directory, you can run:
