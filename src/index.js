@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Calendar from './App';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div>
       <h1>My Calendar</h1>
       <Calendar />
+      <ToastContainer />
     </div>
   );
 }
