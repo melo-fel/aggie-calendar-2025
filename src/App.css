@@ -24,6 +24,8 @@ button {
 }
 
 .calendar-container {
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -33,7 +35,7 @@ button {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-gap: 5px;
+  gap: 10px;
   max-width: 350px;
   align-items: center;
   padding-left: 90px;
@@ -52,6 +54,7 @@ h1, h2 {
   border: 1px solid #ccc;
   background-color: #E8E8E8;
   color: #022761;
+  overflow: hidden;
 }
 
 .calendar-day:hover {

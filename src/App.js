@@ -63,8 +63,8 @@ function Calendar() {
             >
               {validDay ? day : ''}
               {validDay && eventsForDay(dateForCell).map((event, idx) => (
-                <div key={idx} className="event-preview" style={{ fontSize: '0.7em',
-                backgroundColor: event.color, color: '#fff', padding: '2px 4px', borderRadius: '3px'}}>
+                <div key={idx} className="event-preview" style={{ display: 'inline-block', fontSize: '0.7em', backgroundColor: event.color, 
+                color: '#fff', padding: '2px 4px', borderRadius: '3px', margin: '2px 0', whiteSpace: 'normal', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
                   {event.title}
                 </div>
               ))}
