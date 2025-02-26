@@ -3,14 +3,13 @@ import React, { useState } from 'react';
 import { DateTime } from 'luxon';
 
 function Calendar() {
-  const [currentMonth, setCurrentMonth] = useState(DateTime.now().startOf('month'));
-  const [events, setEvents] = useState([]);
-  const [selectDate, setSelectDate] = useState(null);
-  const [eventTitle, setEventTitle] = useState('');
+  const [currentMonth, setCurrentMonth] = useState(DateTime.now().startOf('month')); {/*reference to Code and Create's video*/}
+  const [events, setEvents] = useState([]); {/*reference to Code and Create's video*/}
+  const [selectDate, setSelectDate] = useState(null); {/*reference to Code and Create's video*/}
+  const [eventTitle, setEventTitle] = useState(''); {/*reference to Code and Create's video*/}
 
   const firstDayIndex = currentMonth.weekday % 7;
-  const daysInMonth = currentMonth.daysInMonth;
-  /*const firstDayOfMonth = currentMonth.weekday;*/
+  const daysInMonth = currentMonth.daysInMonth; {/*reference to Code and Create's video*/}
 
   const days = Array.from({ length: 42 }, (_, i) => i - firstDayIndex + 1);
 
@@ -23,12 +22,12 @@ function Calendar() {
     setEventTitle('');
   };
 
-  const handlePrevMonth = () => {
+  const handlePrevMonth = () => { {/*reference to Code and Create's video*/}
     setCurrentMonth(currentMonth.minus({ months: 1 }).startOf('month'));
     setSelectDate(null);
   };
 
-  const handleNextMonth = () => {
+  const handleNextMonth = () => { {/*reference to Code and Create's video*/}
     setCurrentMonth(currentMonth.plus({ months: 1 }).startOf('month'));
     setSelectDate(null);
   };
@@ -99,7 +98,7 @@ function Calendar() {
               onChange={(e) => setEventTitle(e.target.value)}
               placeholder="Event Title"
             />
-            <button type="submit">Add Event</button>
+            <button type="submit">Add Event</button> {/*reference to Code and Create's video*/}
           </form>
           <button onClick={() => setSelectDate(null)}>Close</button>
         </div>
